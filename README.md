@@ -1,5 +1,11 @@
 ## Hi there 👋
 
+Welcome! 
+
+You can call me Bluyo, and I am a full-time software engineer
+
+My specialty would be coding in Python and I like to do game development as hobby.
+
 <!--
 **blueberryoghurt/blueberryoghurt** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
