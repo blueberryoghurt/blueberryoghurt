@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="380" viewBox="0 0 1000 380">
+  <style>
+    .hv{font-family:'Arial Black','Segoe UI Black',Impact,sans-serif;font-weight:900}
+    .mono{font-family:Consolas,'JetBrains Mono','Courier New',monospace}
+    .flick{animation:flick 4s infinite}
+    @keyframes flick{0%,40%,44%,74%,78%,100%{opacity:1}42%{opacity:.55}76%{opacity:.35}}
+    .gl{animation:gl 3.2s infinite steps(1,end);opacity:0}
+    .gr{animation:gr 3.2s infinite steps(1,end);opacity:0}
+    .gm{animation:gm 3.2s infinite steps(1,end)}
+    @keyframes gl{0%,85%{opacity:0;transform:translate(0,0)}87%{opacity:.9;transform:translate(-7px,2px)}90%{opacity:.9;transform:translate(5px,-2px)}93%{opacity:.9;transform:translate(-3px,0)}96%,100%{opacity:0;transform:translate(0,0)}}
+    @keyframes gr{0%,85%{opacity:0;transform:translate(0,0)}87%{opacity:.9;transform:translate(6px,-1px)}90%{opacity:.9;transform:translate(-5px,2px)}93%{opacity:.9;transform:translate(3px,0)}96%,100%{opacity:0;transform:translate(0,0)}}
+    @keyframes gm{0%,85%,96%,100%{transform:translate(0,0)}88%{transform:translate(3px,0) skewX(-8deg)}91%{transform:translate(-3px,0)}94%{transform:translate(1px,0)}}
+    .blink{animation:blink 1s infinite steps(1,end)}
+    @keyframes blink{50%{opacity:0}}
+    .knob{animation:spin 7s linear infinite;transform-box:fill-box;transform-origin:center}
+    .knob2{animation:spin 11s linear infinite reverse;transform-box:fill-box;transform-origin:center}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .scan{animation:scan 3.5s linear infinite}
+    @keyframes scan{from{transform:translateY(-60px)}to{transform:translateY(260px)}}
+    .haz{animation:haz 1.4s linear infinite}
+    @keyframes haz{to{transform:translateX(-40px)}}
+    .float{animation:float 3s ease-in-out infinite}
+    @keyframes float{50%{transform:translateY(-5px)}}
+  </style>
+  <defs>
+    <clipPath id="card"><rect width="1000" height="380" rx="18"/></clipPath>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#1b1b1d" stroke-width="1"/></pattern>
+    <pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="#222"/></pattern>
+    <pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="2" fill="#000" opacity=".35"/></pattern>
+    <pattern id="hazard" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="skewX(-45)"><rect width="40" height="40" fill="#111"/><rect width="20" height="40" fill="#D4FF00"/></pattern>
+    <radialGradient id="screen" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#3b5c58"/><stop offset=".6" stop-color="#1a2b2a"/><stop offset="1" stop-color="#0a1110"/></radialGradient>
+    <radialGradient id="vig" cx="50%" cy="50%" r="65%"><stop offset=".55" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".75"/></radialGradient>
+    <linearGradient id="band" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#cfffe0" stop-opacity=".12"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffb347" stop-opacity=".7"/><stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient>
+    <filter id="noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="1">
+        <animate attributeName="seed" values="1;2;3;4;5;6;7;8" dur=".6s" repeatCount="indefinite" calcMode="discrete"/>
+      </feTurbulence>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <clipPath id="scr"><rect x="80" y="60" width="280" height="190" rx="26"/></clipPath>
+    <clipPath id="typeclip">
+      <rect x="510" y="182" width="0" height="28">
+        <animate attributeName="width" values="0;384;384;0;0" keyTimes="0;.4;.85;.92;1" dur="8s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <!-- background -->
+    <rect width="1000" height="380" fill="#0b0b0c"/>
+    <rect width="1000" height="380" fill="url(#grid)"/>
+    <rect x="480" width="520" height="380" fill="url(#dots)" opacity=".8"/>
+    <text x="560" y="335" class="hv" font-size="250" fill="#131315" letter-spacing="-8">ZZZ</text>
+
+    <!-- vertical side text -->
+    <text class="mono" font-size="9" fill="#3d3d3d" letter-spacing="3" transform="translate(24 330) rotate(-90)">NEW ERIDU // PROXY NETWORK // HDD SYSTEM v2.0</text>
+
+    <!-- ===== CRT TV ===== -->
+    <g>
+      <rect x="50" y="30" width="420" height="250" rx="18" fill="#2a2e33" stroke="#060606" stroke-width="3"/>
+      <rect x="58" y="38" width="404" height="234" rx="13" fill="none" stroke="#3d434a" stroke-width="2"/>
+      <rect x="70" y="50" width="300" height="210" rx="30" fill="#0d0d0d"/>
+      <!-- screen -->
+      <g clip-path="url(#scr)">
+        <rect x="80" y="60" width="280" height="190" fill="url(#screen)"/>
+        <circle cx="300" cy="120" r="40" fill="url(#glow)" class="flick"/>
+        <g class="flick">
+          <text x="98" y="86" class="mono" font-size="12" fill="#D4FF00" font-weight="bold">CH-03</text>
+          <g class="blink"><circle cx="292" cy="82" r="5" fill="#ff3b3b"/><text x="301" y="86" class="mono" font-size="12" fill="#ff6b6b" font-weight="bold">REC</text></g>
+          <!-- bangboo-style emblem -->
+          <g class="float">
+            <circle cx="220" cy="150" r="34" fill="#dedede"/>
+            <circle cx="220" cy="150" r="34" fill="none" stroke="#9a9a9a" stroke-width="2"/>
+            <ellipse cx="209" cy="132" rx="6" ry="15" fill="#151515" transform="rotate(-12 209 132)"/>
+            <ellipse cx="231" cy="132" rx="6" ry="15" fill="#151515" transform="rotate(12 231 132)"/>
+            <ellipse cx="220" cy="158" rx="16" ry="13" fill="#151515"/>
+            <rect x="211" y="154" width="6" height="4" rx="1" fill="#D4FF00" class="blink"/>
+            <rect x="223" y="154" width="6" height="4" rx="1" fill="#D4FF00" class="blink"/>
+          </g>
+          <text x="220" y="222" text-anchor="middle" class="mono" font-size="11" fill="#9fd8c8" letter-spacing="2">CONNECTING TO INTER-KNOT<tspan class="blink">_</tspan></text>
+        </g>
+        <rect x="80" y="60" width="280" height="190" filter="url(#noise)" opacity=".13"/>
+        <rect x="80" y="60" width="280" height="190" fill="url(#scanlines)"/>
+        <rect x="80" y="60" width="280" height="50" fill="url(#band)" class="scan"/>
+        <rect x="80" y="60" width="280" height="190" fill="url(#vig)"/>
+        <path d="M95 75 Q 160 64 230 70 Q 140 80 100 120 Z" fill="#fff" opacity=".05"/>
+      </g>
+      <!-- control panel -->
+      <circle cx="420" cy="85" r="22" fill="#151719" stroke="#4a5158" stroke-width="2"/>
+      <g class="knob"><circle cx="420" cy="85" r="15" fill="#3a4046"/><rect x="418.5" y="71" width="3" height="11" rx="1" fill="#D4FF00"/></g>
+      <circle cx="420" cy="140" r="22" fill="#151719" stroke="#4a5158" stroke-width="2"/>
+      <g class="knob2"><circle cx="420" cy="140" r="15" fill="#3a4046"/><rect x="418.5" y="126" width="3" height="11" rx="1" fill="#e6e6e6"/></g>
+      <g fill="#14171a">
+        <rect x="395" y="180" width="50" height="3" rx="1"/><rect x="395" y="188" width="50" height="3" rx="1"/>
+        <rect x="395" y="196" width="50" height="3" rx="1"/><rect x="395" y="204" width="50" height="3" rx="1"/>
+        <rect x="395" y="212" width="50" height="3" rx="1"/><rect x="395" y="220" width="50" height="3" rx="1"/>
+        <rect x="395" y="228" width="50" height="3" rx="1"/><rect x="395" y="236" width="50" height="3" rx="1"/>
+      </g>
+      <circle cx="402" cy="256" r="4" fill="#D4FF00" class="blink"/>
+      <!-- VCR deck -->
+      <rect x="50" y="290" width="420" height="44" rx="8" fill="#1c1f22" stroke="#060606" stroke-width="2"/>
+      <rect x="200" y="306" width="210" height="9" rx="2" fill="#050505"/>
+      <rect x="66" y="301" width="84" height="22" rx="3" fill="#081008"/>
+      <text x="108" y="317" text-anchor="middle" class="mono blink" font-size="14" fill="#D4FF00" font-weight="bold">12:00</text>
+      <circle cx="436" cy="312" r="6" fill="#2e3338"/><circle cx="454" cy="312" r="6" fill="#2e3338"/>
+    </g>
+
+    <!-- ===== Right info ===== -->
+    <rect x="510" y="36" width="182" height="24" fill="#D4FF00"/>
+    <text x="520" y="53" class="mono" font-size="13" font-weight="bold" fill="#0b0b0c">PROXY FILE // No.0451</text>
+    <circle cx="712" cy="48" r="5" fill="#D4FF00" class="blink"/>
+    <text x="724" y="53" class="mono" font-size="13" fill="#D4FF00" font-weight="bold">ONLINE</text>
+    <g fill="#3a3a3a" class="mono" font-size="16"><text x="955" y="50">+</text><text x="955" y="68">+</text><text x="955" y="86">+</text></g>
+
+    <!-- glitch name -->
+    <g transform="translate(510 160) skewX(-8)">
+      <text x="7" y="7" class="hv" font-size="98" fill="#D4FF00">BLUYO</text>
+      <text class="hv gl" font-size="98" fill="#ff2d6f">BLUYO</text>
+      <text class="hv gr" font-size="98" fill="#00e5ff">BLUYO</text>
+      <text class="hv gm" font-size="98" fill="#f4f4f4" stroke="#0b0b0c" stroke-width="2">BLUYO</text>
+    </g>
+
+    <!-- typing tagline -->
+    <text x="510" y="202" class="mono" font-size="18" fill="#d6d6d6" clip-path="url(#typeclip)" textLength="380" lengthAdjust="spacingAndGlyphs">Software Engineer · Proxy of New Eridu</text>
+    <rect x="510" y="186" width="10" height="20" fill="#D4FF00" class="blink">
+      <animate attributeName="x" values="510;894;894;510;510" keyTimes="0;.4;.85;.92;1" dur="8s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- nav pills -->
+    <g class="hv" font-size="14">
+      <rect x="510" y="232" width="130" height="36" rx="18" fill="#2a2a2c"/>
+      <rect x="650" y="232" width="130" height="36" rx="18" fill="#2a2a2c"/>
+      <rect x="790" y="232" width="150" height="36" rx="18" fill="#2a2a2c"/>
+      <circle cx="531" cy="250" r="11" fill="#47474a"/><circle cx="671" cy="250" r="11" fill="#47474a"/><circle cx="811" cy="250" r="11" fill="#47474a"/>
+      <text x="550" y="255" fill="#eaeaea">CITY</text>
+      <text x="690" y="255" fill="#eaeaea">AGENT</text>
+      <text x="830" y="255" fill="#eaeaea">COMMISSION</text>
+      <rect y="232" width="130" height="36" rx="18" fill="none" stroke="#D4FF00" stroke-width="2.5">
+        <animate attributeName="x" values="510;650;790;510" keyTimes="0;.33;.66;1" dur="4.5s" repeatCount="indefinite" calcMode="discrete"/>
+        <animate attributeName="width" values="130;130;150;130" keyTimes="0;.33;.66;1" dur="4.5s" repeatCount="indefinite" calcMode="discrete"/>
+      </rect>
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0 0;140 0;280 0;0 0" keyTimes="0;.33;.66;1" dur="4.5s" repeatCount="indefinite" calcMode="discrete"/>
+        <circle cx="531" cy="250" r="11" fill="#D4FF00"/>
+        <text x="524" y="255" fill="#0b0b0c" font-size="13">»</text>
+      </g>
+    </g>
+
+    <text x="510" y="300" class="mono" font-size="12" fill="#D4FF00" font-weight="bold">◢ HOLLOW ZERO ACCESS: GRANTED</text>
+    <text x="510" y="320" class="mono" font-size="12" fill="#6b6b6b">LAST SEEN: SIXTH STREET, NEW ERIDU · VIDEO STORE "RANDOM PLAY"</text>
+
+    <!-- hazard tape -->
+    <rect y="344" width="1000" height="36" fill="#111"/>
+    <rect x="0" y="348" width="1080" height="28" fill="url(#hazard)" class="haz"/>
+    <rect x="380" y="349" width="240" height="26" fill="#0b0b0c"/>
+    <text x="500" y="367" text-anchor="middle" class="hv" font-size="13" fill="#D4FF00" letter-spacing="3">CAUTION · HOLLOW AREA</text>
+  </g>
+  <rect x="1" y="1" width="998" height="378" rx="18" fill="none" stroke="#262628" stroke-width="2"/>
+</svg>

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320">
+  <style>
+    .hv{font-family:'Arial Black','Segoe UI Black',Impact,sans-serif;font-weight:900}
+    .b{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-weight:700}
+    .mono{font-family:Consolas,'JetBrains Mono','Courier New',monospace}
+    .pulse{animation:pulse 2.4s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes pulse{50%{transform:scale(1.08)}}
+    .blink{animation:blink 1.2s infinite steps(1,end)}
+    @keyframes blink{50%{opacity:0}}
+    .slide{animation:slide 9s linear infinite}
+    @keyframes slide{to{transform:translateX(-120px)}}
+  </style>
+  <defs>
+    <clipPath id="card"><rect width="1000" height="320" rx="18"/></clipPath>
+    <pattern id="grid" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#d3d3d1" stroke-width="1"/></pattern>
+    <pattern id="diag" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#1b1b1c"/><rect width="2" height="10" fill="#242426"/></pattern>
+  </defs>
+  <g clip-path="url(#card)">
+    <rect width="1000" height="320" fill="#e9e9e7"/>
+    <rect width="1000" height="240" fill="url(#grid)"/>
+    <g class="slide"><text x="230" y="215" class="hv" font-size="170" fill="#dcdcda" letter-spacing="-4">AGENT AGENT</text></g>
+
+    <!-- logo tab -->
+    <path d="M36 0h70v52a12 12 0 0 1-12 12H48a12 12 0 0 1-12-12z" fill="#111"/>
+    <text x="71" y="42" text-anchor="middle" class="hv" font-size="26" fill="#D4FF00" transform="skewX(-10) translate(7 0)">BY</text>
+
+    <!-- name block -->
+    <text x="40" y="112" class="mono" font-size="12" fill="#777" letter-spacing="3">AGENT // 01</text>
+    <text x="40" y="160" class="hv" font-size="50" fill="#202020">BLUYO</text>
+    <text x="40" y="186" class="b" font-size="15" fill="#555" letter-spacing="2">SOFTWARE ENGINEER</text>
+
+    <!-- chips -->
+    <g class="b" font-size="12">
+      <rect x="40" y="200" width="150" height="26" rx="13" fill="#2a2a2c"/>
+      <circle cx="54" cy="213" r="8" fill="#5ec8ff"/><text x="51" y="217" fill="#111" font-size="10">⚡</text>
+      <text x="68" y="217" fill="#eee">ELECTRIC · ATTR</text>
+      <rect x="198" y="200" width="160" height="26" rx="13" fill="#2a2a2c"/>
+      <circle cx="212" cy="213" r="8" fill="#D4FF00"/><text x="207" y="217" fill="#111" font-size="11">»</text>
+      <text x="226" y="217" fill="#eee">BACKEND · SPECIALTY</text>
+    </g>
+
+    <!-- rank badge -->
+    <g class="pulse">
+      <rect x="378" y="110" width="70" height="70" rx="8" fill="#111" transform="rotate(45 413 145)"/>
+      <rect x="386" y="118" width="54" height="54" rx="5" fill="#D4FF00" transform="rotate(45 413 145)"/>
+      <text x="413" y="162" text-anchor="middle" class="hv" font-size="44" fill="#111">S</text>
+    </g>
+    <text x="413" y="215" text-anchor="middle" class="mono" font-size="11" fill="#555" letter-spacing="2">RANK</text>
+
+    <!-- vertical divider bar -->
+    <rect x="500" y="0" width="22" height="320" fill="#161617"/>
+    <text class="mono" font-size="9" fill="#777" letter-spacing="3" transform="translate(515 300) rotate(-90)">BLUYO | AGENT FILE | UI DESIGN</text>
+    <g fill="#bbb" class="mono" font-size="14"><text x="530" y="120">+</text><text x="530" y="136">+</text><text x="530" y="152">+</text></g>
+
+    <!-- faction banner -->
+    <rect x="575" y="26" width="425" height="56" fill="#ff4b1f"/>
+    <circle cx="604" cy="54" r="30" fill="#ffb800" stroke="#111" stroke-width="4"/>
+    <circle cx="604" cy="54" r="19" fill="#111"/>
+    <text x="604" y="61" text-anchor="middle" class="hv" font-size="17" fill="#ffb800">BY</text>
+    <text x="645" y="54" class="hv" font-size="19" fill="#1a1a1a">BLUEBERRY HEAVY INDUSTRY</text>
+    <text x="645" y="72" class="b" font-size="11" fill="#3b120a">Our goal is not to build an app, but a home.</text>
+
+    <!-- stat bars -->
+    <g class="b" font-size="12" fill="#222">
+      <text x="560" y="118">PYTHON</text>
+      <text x="560" y="142">FASTAPI</text>
+      <text x="560" y="166">TYPESCRIPT</text>
+      <text x="560" y="190">VUE</text>
+      <text x="560" y="214">DOCKER</text>
+    </g>
+    <g fill="#cfcfcd">
+      <rect x="660" y="108" width="260" height="11" rx="2"/><rect x="660" y="132" width="260" height="11" rx="2"/>
+      <rect x="660" y="156" width="260" height="11" rx="2"/><rect x="660" y="180" width="260" height="11" rx="2"/>
+      <rect x="660" y="204" width="260" height="11" rx="2"/>
+    </g>
+    <g fill="#1b1b1c">
+      <rect x="660" y="108" width="0" height="11" rx="2"><animate attributeName="width" from="0" to="239" dur="1.4s" begin=".2s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".2 .8 .2 1"/></rect>
+      <rect x="660" y="132" width="0" height="11" rx="2"><animate attributeName="width" from="0" to="221" dur="1.4s" begin=".35s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".2 .8 .2 1"/></rect>
+      <rect x="660" y="156" width="0" height="11" rx="2"><animate attributeName="width" from="0" to="203" dur="1.4s" begin=".5s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".2 .8 .2 1"/></rect>
+      <rect x="660" y="180" width="0" height="11" rx="2"><animate attributeName="width" from="0" to="192" dur="1.4s" begin=".65s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".2 .8 .2 1"/></rect>
+      <rect x="660" y="204" width="0" height="11" rx="2"><animate attributeName="width" from="0" to="182" dur="1.4s" begin=".8s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".2 .8 .2 1"/></rect>
+    </g>
+    <g fill="#D4FF00" stroke="#111" stroke-width="1.5">
+      <rect x="655" y="106" width="8" height="15" rx="1"><animate attributeName="x" from="655" to="894" dur="1.4s" begin=".2s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".2 .8 .2 1"/></rect>
+      <rect x="655" y="130" width="8" height="15" rx="1"><animate attributeName="x" from="655" to="876" dur="1.4s" begin=".35s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".2 .8 .2 1"/></rect>
+      <rect x="655" y="154" width="8" height="15" rx="1"><animate attributeName="x" from="655" to="858" dur="1.4s" begin=".5s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".2 .8 .2 1"/></rect>
+      <rect x="655" y="178" width="8" height="15" rx="1"><animate attributeName="x" from="655" to="847" dur="1.4s" begin=".65s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".2 .8 .2 1"/></rect>
+      <rect x="655" y="202" width="8" height="15" rx="1"><animate attributeName="x" from="655" to="837" dur="1.4s" begin=".8s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".2 .8 .2 1"/></rect>
+    </g>
+    <g class="hv" font-size="13" fill="#222" text-anchor="end">
+      <text x="965" y="119">92</text><text x="965" y="143">85</text><text x="965" y="167">78</text><text x="965" y="191">74</text><text x="965" y="215">70</text>
+    </g>
+
+    <!-- bottom band -->
+    <rect y="240" width="1000" height="80" fill="url(#diag)"/>
+    <rect x="40" y="258" width="430" height="42" rx="21" fill="#2b2b2d"/>
+    <circle cx="63" cy="279" r="14" fill="#D4FF00"/>
+    <rect x="59" y="270" width="8" height="13" rx="4" fill="#111"/><rect x="62" y="284" width="2" height="5" fill="#111"/>
+    <text x="86" y="285" class="b" font-size="16"><tspan fill="#D4FF00">MOTTO: </tspan><tspan fill="#f2f2f2">Ship it. Then sleep. zzz</tspan><tspan fill="#D4FF00" class="blink">_</tspan></text>
+    <text x="965" y="282" text-anchor="end" class="hv" font-size="22" fill="#D4FF00">INTER-KNOT LV.60</text>
+    <text x="965" y="302" text-anchor="end" class="mono" font-size="12" fill="#888">github.com/blueberryoghurt</text>
+  </g>
+  <rect x="1" y="1" width="998" height="318" rx="18" fill="none" stroke="#2a2a2c" stroke-width="2"/>
+</svg>

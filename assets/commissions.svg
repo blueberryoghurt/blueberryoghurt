@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="320" viewBox="0 0 1000 320">
+  <style>
+    .hv{font-family:'Arial Black','Segoe UI Black',Impact,sans-serif;font-weight:900}
+    .b{font-family:'Segoe UI','Helvetica Neue',Arial,sans-serif;font-weight:700}
+    .mono{font-family:Consolas,'JetBrains Mono','Courier New',monospace}
+    .blink{animation:blink 1.4s infinite steps(1,end)}
+    .blink2{animation:blink 2.3s infinite steps(1,end)}
+    .blink3{animation:blink 3.1s infinite steps(1,end)}
+    @keyframes blink{50%{opacity:.15}}
+    .neon{animation:neon 3s infinite}
+    @keyframes neon{0%,18%,22%,60%,64%,100%{opacity:1}20%,62%{opacity:.2}}
+    .spin{animation:spin 8s linear infinite;transform-box:fill-box;transform-origin:center}
+    @keyframes spin{to{transform:rotate(360deg)}}
+    .bob{animation:bob 1.6s ease-in-out infinite}
+    @keyframes bob{50%{transform:translateY(4px)}}
+  </style>
+  <defs>
+    <clipPath id="card"><rect width="1000" height="320" rx="18"/></clipPath>
+    <pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.1" fill="#232325"/></pattern>
+    <linearGradient id="main" x1="0" x2="1"><stop offset="0" stop-color="#FFD400"/><stop offset="1" stop-color="#FF9D00"/></linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a1640"/><stop offset=".6" stop-color="#5a2346"/><stop offset="1" stop-color="#b8503a"/></linearGradient>
+    <clipPath id="pic"><rect x="30" y="92" width="460" height="92" rx="6"/></clipPath>
+    <clipPath id="tab">
+      <rect x="524" y="80" width="146" height="28" rx="14">
+        <animate attributeName="x" values="524;524;674;674;824;824;524" keyTimes="0;.28;.33;.61;.66;.95;1" dur="6s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#card)">
+    <rect width="1000" height="320" fill="#141415"/>
+    <rect width="1000" height="320" fill="url(#dots)"/>
+
+    <!-- header -->
+    <rect width="1000" height="60" fill="#1c1c1e"/>
+    <rect width="1000" height="4" fill="#3a5bff"/>
+    <rect x="22" y="13" width="46" height="36" fill="#0b0b0c"/>
+    <text x="45" y="40" text-anchor="middle" class="hv" font-size="22" fill="#fff">03</text>
+    <text x="80" y="40" class="hv" font-size="24" fill="#fff" transform="skewX(-8) translate(5 0)">INTER-KNOT</text>
+    <text x="255" y="40" class="mono" font-size="13" fill="#D4FF00" font-weight="bold">// COMMISSION BOARD</text>
+    <g class="spin">
+      <circle cx="955" cy="31" r="18" fill="#0b0b0c" stroke="#3a5bff" stroke-width="3"/>
+      <ellipse cx="955" cy="31" rx="7" ry="13" fill="none" stroke="#fff" stroke-width="1.6"/>
+      <line x1="942" y1="31" x2="968" y2="31" stroke="#fff" stroke-width="1.6"/>
+      <circle cx="955" cy="31" r="13" fill="none" stroke="#fff" stroke-width="1.6"/>
+    </g>
+
+    <!-- ===== left: details ===== -->
+    <text x="30" y="82" class="b" font-size="11" fill="#777" letter-spacing="1">COMMISSION DETAILS</text>
+    <g clip-path="url(#pic)">
+      <rect x="30" y="92" width="460" height="92" fill="url(#sky)"/>
+      <circle cx="420" cy="118" r="16" fill="#ffe2b0" opacity=".85"/>
+      <g fill="#0d0d10">
+        <rect x="30" y="140" width="40" height="50"/><rect x="72" y="118" width="34" height="72"/><rect x="108" y="132" width="50" height="58"/>
+        <rect x="160" y="105" width="28" height="85"/><rect x="190" y="126" width="56" height="64"/><rect x="248" y="112" width="38" height="78"/>
+        <rect x="288" y="136" width="60" height="54"/><rect x="350" y="122" width="30" height="68"/><rect x="382" y="142" width="54" height="48"/><rect x="438" y="116" width="52" height="74"/>
+      </g>
+      <g fill="#FFD400">
+        <rect x="80" y="126" width="4" height="4" class="blink"/><rect x="92" y="138" width="4" height="4" class="blink2"/><rect x="166" y="114" width="4" height="4" class="blink3"/>
+        <rect x="176" y="130" width="4" height="4" class="blink"/><rect x="256" y="122" width="4" height="4" class="blink2"/><rect x="268" y="140" width="4" height="4" class="blink3"/>
+        <rect x="358" y="132" width="4" height="4" class="blink"/><rect x="448" y="126" width="4" height="4" class="blink3"/><rect x="462" y="142" width="4" height="4" class="blink2"/>
+      </g>
+      <g class="neon">
+        <rect x="296" y="144" width="44" height="18" rx="3" fill="none" stroke="#ff3d8b" stroke-width="2"/>
+        <text x="318" y="158" text-anchor="middle" class="hv" font-size="11" fill="#ff3d8b">24/7</text>
+      </g>
+      <rect x="30" y="160" width="460" height="24" fill="#000" opacity=".75"/>
+      <text x="42" y="177" class="hv" font-size="14" fill="#fff">Code × Caffeine × Chaos</text>
+    </g>
+    <g class="b" font-size="13">
+      <rect x="30" y="194" width="460" height="26" rx="13" fill="#1f1f21"/>
+      <circle cx="46" cy="207" r="7" fill="#35d07f"/><path d="M42.5 207l2.5 2.5 4.5-5" stroke="#111" stroke-width="2" fill="none"/>
+      <text x="60" y="212" fill="#ddd">Talk with the client (and pretend to understand the spec)</text>
+      <rect x="30" y="226" width="460" height="26" rx="13" fill="#1f1f21"/>
+      <circle cx="46" cy="239" r="6.5" fill="none" stroke="#777" stroke-width="1.6"/>
+      <text x="60" y="244" fill="#bbb">Fix that one bug from last Friday<tspan fill="#FFD400" class="blink">...</tspan></text>
+    </g>
+    <rect x="30" y="266" width="150" height="38" rx="19" fill="#0b0b0c" stroke="#333" stroke-width="2"/>
+    <circle cx="52" cy="285" r="12" fill="#2a2a2c"/><path d="M48 279l10 6-10 6z" fill="#fff"/>
+    <text x="72" y="284" class="hv" font-size="14" fill="#fff">START</text>
+    <text x="72" y="297" class="mono" font-size="8" fill="#888">TRACKING</text>
+    <g fill="none" stroke="#3a3a3c" stroke-width="2"><circle cx="205" cy="285" r="12"/><circle cx="235" cy="285" r="12"/><circle cx="265" cy="285" r="12"/><circle cx="295" cy="285" r="12"/></g>
+    <!-- bangboo walking -->
+    <g class="bob">
+      <g>
+        <animateTransform attributeName="transform" type="translate" values="0 0;150 0;0 0" dur="10s" repeatCount="indefinite"/>
+        <ellipse cx="335" cy="276" rx="4" ry="10" fill="#e8e8e8" transform="rotate(-10 335 276)"/>
+        <ellipse cx="347" cy="276" rx="4" ry="10" fill="#e8e8e8" transform="rotate(10 347 276)"/>
+        <ellipse cx="341" cy="292" rx="13" ry="11" fill="#e8e8e8"/>
+        <rect x="334" y="289" width="5" height="3" rx="1" fill="#111"/><rect x="343" y="289" width="5" height="3" rx="1" fill="#111"/>
+      </g>
+    </g>
+
+    <!-- ===== right: schedule ===== -->
+    <rect x="520" y="76" width="454" height="36" rx="18" fill="#0b0b0c" stroke="#FFD400" stroke-width="2.5"/>
+    <g class="hv" font-size="13" text-anchor="middle" font-style="italic">
+      <text x="597" y="99" fill="#ccc">MORNING</text><text x="747" y="99" fill="#ccc">EVENING</text><text x="897" y="99" fill="#ccc">MIDNIGHT</text>
+    </g>
+    <g clip-path="url(#tab)">
+      <rect x="520" y="76" width="454" height="36" fill="#FFD400"/>
+      <g class="hv" font-size="13" text-anchor="middle" font-style="italic" fill="#111">
+        <text x="597" y="99">MORNING</text><text x="747" y="99">EVENING</text><text x="897" y="99">MIDNIGHT</text>
+      </g>
+    </g>
+
+    <rect x="520" y="126" width="454" height="30" rx="15" fill="url(#main)"/>
+    <text x="538" y="146" class="b" font-size="13" fill="#111">[Main] Building backends that don't wake me up at 3AM</text>
+    <rect x="520" y="126" width="0" height="30" rx="15" fill="#fff" opacity=".25">
+      <animate attributeName="width" values="0;454;454" keyTimes="0;.7;1" dur="4s" repeatCount="indefinite"/>
+    </rect>
+
+    <g class="b" font-size="13">
+      <rect x="520" y="164" width="454" height="28" rx="14" fill="#1d1d1f" stroke="#2c2c2e"/>
+      <text x="538" y="183" fill="#e2e2e2"><tspan fill="#5ec8ff">[Side]</tspan> Mastering Vue 3 + TypeScript</text>
+      <rect x="520" y="200" width="454" height="28" rx="14" fill="#1d1d1f" stroke="#2c2c2e"/>
+      <text x="538" y="219" fill="#e2e2e2"><tspan fill="#D4FF00">[Daily]</tspan> Coffee → Code → Commit → zzz</text>
+    </g>
+    <g class="hv" font-size="12" fill="#4a4a4c">
+      <rect x="520" y="236" width="454" height="28" rx="14" fill="#18181a" stroke="#262628"/>
+      <circle cx="540" cy="250" r="7" fill="none" stroke="#4a4a4c" stroke-width="1.5"/><path d="M536 246l8 8M544 246l-8 8" stroke="#4a4a4c" stroke-width="1.5"/>
+      <text x="556" y="255">EMPTY</text>
+      <rect x="520" y="272" width="454" height="28" rx="14" fill="#18181a" stroke="#262628"/>
+      <circle cx="540" cy="286" r="7" fill="none" stroke="#4a4a4c" stroke-width="1.5"/><path d="M536 282l8 8M544 282l-8 8" stroke="#4a4a4c" stroke-width="1.5"/>
+      <text x="556" y="291">EMPTY</text>
+    </g>
+  </g>
+  <rect x="1" y="1" width="998" height="318" rx="18" fill="none" stroke="#2a2a2c" stroke-width="2"/>
+</svg>

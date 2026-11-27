@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="22" viewBox="0 0 1000 22">
+  <style>
+    .haz{animation:haz 1.4s linear infinite}
+    @keyframes haz{to{transform:translateX(-40px)}}
+  </style>
+  <defs>
+    <clipPath id="c"><rect width="1000" height="22" rx="4"/></clipPath>
+    <pattern id="hazard" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="skewX(-45)"><rect width="40" height="40" fill="#111"/><rect width="20" height="40" fill="#D4FF00"/></pattern>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="1080" height="22" fill="url(#hazard)" class="haz"/>
+  </g>
+</svg>
